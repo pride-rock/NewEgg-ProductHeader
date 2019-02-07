@@ -1,0 +1,26 @@
+{
+  "name": "newegg-productheader",
+  "version": "1.0.0",
+  "description": "newegg webstore clone, product header component",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pride-rock/NewEgg-ProductHeader.git"
+  },
+  "author": "Marc-Benedict L. Choa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pride-rock/NewEgg-ProductHeader/issues"
+  },
+  "homepage": "https://github.com/pride-rock/NewEgg-ProductHeader#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "node": "^11.9.0"
+  }
+}

@@ -6,11 +6,6 @@ var db = new sqlite3.Database("productHeader.db");
 // sqlite3 (DBFILE NAME) < (SQL FILENAME)
 // if dropping database/tables, re-run command
 
-// console.log(data.productName)
-// console.log(data.images)
-
-// REFACTOR FOR MULTIPLE ITERATIONS FROM GENERATOR
-
 db.serialize(function() {
   sampleData.forEach(data => {
     //PRODUCT TABLE
@@ -47,8 +42,6 @@ db.serialize(function() {
       ])
     );
 
-    // REFACTORING AND CONSOLIDATION OF OPTIONS SECTION
-
     // CATEGORY TABLE
     data.categories.forEach(category =>
       db.run(
@@ -60,22 +53,14 @@ db.serialize(function() {
     );
 
     // OPTIONCATEGORIES TABLES
-    // REQUIRE CATEGORY INCREMENTOR FORIEGN KEY, TEST
     data.categories.forEach(category =>
         category.options.forEach(choice =>
-          // console.log(choice)
           db.run(
             "INSERT INTO optionCategories \
             (options, id_category) VALUES (?,?)",
             [choice.singleOption, choice.categoryId]
           )
         )
-      // .forEach(eachOption =>
-      //   db.run("INSERT INTO optionCategories \
-      //   (options, id_category) VALUES (?,?)", [
-      //     eachOption.options, data.categories.categoryIterator
-      //   ])
-      // );
     );
 
     // REQUIRE FOREIGN KEY
@@ -88,5 +73,3 @@ db.serialize(function() {
     );
   });
 });
-
-// console.log(sampleData);

@@ -64,12 +64,9 @@ let multipleImg = function() {
 // variation function, for different amount of images // NOPE
 // variation function, for different amount of product description bullets //NOPE
 
-// one || two option choices function //2 for now
-// REFACTOR REFACTOR REFACTOR
 let categoryName = function() {
   let output = [];
   
-  // variation function, for different amount of option1 choices
   //random number between 1-7 for for loop upper limit
   for (let i = 1; i < getRandomInt(1, 4); i++) {
     output.push({ 

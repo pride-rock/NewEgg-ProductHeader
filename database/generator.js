@@ -24,8 +24,6 @@ let generation = function() {
       shipOrigin: "newegg",
 
       categories: categoryName(),
-      
-      // issue with getting categories ID
       // nest options into categories
       /**
        * categories: {categoryIterator: 1, 

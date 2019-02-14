@@ -4,7 +4,7 @@ const axios = require("axios");
 const parser = require("body-parser");
 const app = express();
 
-app.use(express.static(__dirname + "/../client"));
+app.use(express.static(__dirname + "/../client/dist"));
 app.use(parser.json());
 
 // db connect

@@ -4,6 +4,9 @@ node_modules
 # configuration keys; API KEYS, AWS SSH KEYS
 .config.js
 
+# db files
+productHeader.db
+
 # miscellaneous
 package-lock.json
 example

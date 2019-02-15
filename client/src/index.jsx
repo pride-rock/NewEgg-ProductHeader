@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import productImage from "./components/productImage"
-import productHeaderInformation from "./components/productHeaderInformation"
-import productOptions from "./components/productOptions"
-import productFooterInformation from "./components/productFooterInformation"
+import ProductImage from "./components/ProductImage"
+import ProductHeaderInformation from "./components/ProductHeaderInformation"
+import ProductOptions from "./components/ProductOptions"
+import ProductFooterInformation from "./components/ProductFooterInformation"
 import axios from "axios";
 
 class App extends React.Component {
@@ -15,7 +15,7 @@ class App extends React.Component {
   }
   componentDidMount(){
     // GET request for productImages, productOptions, productHeaderInformation, productFooterInformation
-    // productImages; mouseOverZoom(), image tiles w/ mouseOver()
+    // productImages; mouseOverZoom(), image tiles w/ mouseOver() DONT NEED TO
     // productHeaderInformation; title, share button (w/ social media icons), star rating reviews, Q&A #
     // productOptions; product varying options
     // productFooterInformation; descriptions
@@ -24,7 +24,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>Work in Progress</h1>
+        <ProductImage/>
       </div>
     );
   }

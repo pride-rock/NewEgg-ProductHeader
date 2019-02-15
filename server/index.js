@@ -28,6 +28,19 @@ app.get("/api/items/:id", (req, res) => {
   );
 });
 
+app.get("/api/images/:id", (req,res) => {
+  db.all(
+    "SELECT * FROM img WHERE id_product=(?)",
+    [req.params.id],
+    (err, response) => {
+      if (err) console.log("db get img request failed:", err);
+      else {
+        res.send(response)
+      }
+    }
+  )
+} )
+
 let port = process.env.PORT || 3010;
 app.listen(port, function() {
   console.log(`listening on port ${port}`);

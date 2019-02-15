@@ -1,6 +1,6 @@
 import React from 'react'
 
-class productHeaderInformation extends React.Component {
+class ProductHeaderInformation extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -17,4 +17,4 @@ class productHeaderInformation extends React.Component {
   }
 }
 
-export default productHeaderInformation
+export default ProductHeaderInformation

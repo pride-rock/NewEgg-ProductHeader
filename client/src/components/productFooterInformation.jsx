@@ -1,6 +1,6 @@
 import React from 'react'
 
-class productFooterInformation extends React.Component {
+class ProductFooterInformation extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -17,4 +17,4 @@ class productFooterInformation extends React.Component {
   }
 }
 
-export default productFooterInformation
+export default ProductFooterInformation

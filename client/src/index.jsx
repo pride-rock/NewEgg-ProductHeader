@@ -15,7 +15,7 @@ class App extends React.Component {
   }
   componentDidMount(){
     // GET request for productImages, productOptions, productHeaderInformation, productFooterInformation
-    // productImages; mouseOverZoom(), image tiles w/ mouseOver() DONT NEED TO
+    // productImages; mouseOverZoom(), image tiles w/ mouseOver()
     // productHeaderInformation; title, share button (w/ social media icons), star rating reviews, Q&A #
     // productOptions; product varying options
     // productFooterInformation; descriptions
@@ -25,9 +25,10 @@ class App extends React.Component {
     return (
       <div>
         <ProductImage/>
+        {/* <ProductFooterInformation/> */}
       </div>
     );
   }
 }
 
-ReactDOM.render(<App />, document.getElementById("app"));
+ReactDOM.render(<App/>, document.getElementById("app"));

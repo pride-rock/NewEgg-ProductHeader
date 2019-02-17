@@ -38,8 +38,42 @@ app.get("/api/images/:id", (req,res) => {
         res.send(response)
       }
     }
-  )
-} )
+  );
+});
+
+app.get("/api/description/:id", (req,res) => {
+  db.all("SELECT * FROM description WHERE id_product=(?)",
+  [req.params.id],
+  (err, response) => {
+    if (err) console.log("db get description request failed:", err);
+    else {
+      res.send(response)
+    }
+  })
+})
+
+app.get("/api/category/:id", (req,res) => {
+  db.all("SELECT * FROM category WHERE id_product=(?)",
+  [req.params.id],
+  (err, response) => {
+    if (err) console.log("db get category request failed:", err);
+    else {
+      res.send(response)
+    }
+  })
+})
+
+app.get("/api/option_categories/:id", (req,res) => {
+  db.all("SELECT * FROM optionCategories WHERE id_category=(?)",
+  [req.params.id],
+  (err, response) => {
+    if (err) console.log("db get optionCategories request failed:", err);
+    else {
+      res.send(response)
+    }
+  })
+})
+
 
 let port = process.env.PORT || 3010;
 app.listen(port, function() {

@@ -29,7 +29,7 @@ class ProductImage extends React.Component {
   getImages() {
     axios.get(`api/images/${this.state.productId}`)
       .then(({ data }) => {
-        this.setState({ images: data[0].imgSrc }); //configure data to be specifying what in data is images data.img
+        this.setState({ images: data }); //configure data to be specifying what in data is images data.img
       })
       .catch(err => console.error(err));
   }
@@ -37,12 +37,10 @@ class ProductImage extends React.Component {
   render() {
     return (
       <div>
-        <h1>Image Testing</h1>
-        <img
-          src={this.state.images}
-          // set index element [0] as primary
-        />
-        {/* several tiles images, .map() through these */}
+        <h1>Image Testing id:{this.state.productId}</h1>
+        {this.state.images.map((image) =>
+          <img src={image.imgSrc} />
+        )}
       </div>
     );
   }

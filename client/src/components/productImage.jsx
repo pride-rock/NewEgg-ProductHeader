@@ -1,5 +1,9 @@
 import React from "react";
 import axios from "axios";
+import Image from "react-bootstrap/Image";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 class ProductImage extends React.Component {
   constructor(props) {
@@ -7,7 +11,8 @@ class ProductImage extends React.Component {
     this.state = {
       productId: 47,
       logoImg: "",
-      images: []
+      images: [],
+      primaryImage: ""
     };
     this.getImages = this.getImages.bind(this);
     this.getLogo = this.getLogo.bind(this);
@@ -20,28 +25,43 @@ class ProductImage extends React.Component {
   }
 
   getLogo() {
-    axios.get(`api/items/${this.state.productId}`)
+    axios
+      .get(`api/items/${this.state.productId}`)
       .then(({ data }) => {
         this.setState({ logoImg: data.logoOverlay });
       })
       .catch(err => console.error(err));
   }
   getImages() {
-    axios.get(`api/images/${this.state.productId}`)
+    axios
+      .get(`api/images/${this.state.productId}`)
       .then(({ data }) => {
-        this.setState({ images: data }); //configure data to be specifying what in data is images data.img
+        this.setState({ images: data, primaryImage: data[0] }); //configure data to be specifying what in data is images data.img
       })
       .catch(err => console.error(err));
   }
 
   render() {
     return (
-      <div>
-        <h1>Image Testing id:{this.state.productId}</h1>
-        {this.state.images.map((image) =>
-          <img src={image.imgSrc} />
-        )}
-      </div>
+      <Container>
+        <Row>
+          <Col md="auto">
+            {/* <h1>Image Testing id:{this.state.productId}</h1> */}
+            <Image
+              src={this.state.primaryImage.imgSrc}
+              width="470"
+              height="350"
+            />
+          </Col>
+        </Row>
+        <Row >
+          {this.state.images.map(image => (
+            <Col md="auto">
+              <Image src={image.imgSrc} thumbnail width="56" height="48"/>
+            </Col>
+          ))}
+        </Row>
+      </Container>
     );
   }
 }

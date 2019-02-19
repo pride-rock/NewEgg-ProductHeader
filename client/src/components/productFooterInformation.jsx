@@ -56,7 +56,12 @@ class ProductFooterInformation extends React.Component {
         </Row>
         <Row>
           <Col>
-            {this.state.stockQuantity} New from ${this.state.lowestPrice}
+            <a href="#">{this.state.stockQuantity} New</a> from <b>${this.state.lowestPrice}</b>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <hr/>
           </Col>
         </Row>
       </Container>

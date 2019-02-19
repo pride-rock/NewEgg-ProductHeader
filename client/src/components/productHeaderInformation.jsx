@@ -44,7 +44,7 @@ class ProductHeaderInformation extends React.Component {
           stockQuantity: data.stockAmount,
           sellLimit: data.sellLimit,
           lowestPrice: data.lowestPrice,
-          stockStatus: data.stockStatus, //1 or 0, 1 for true & 0 for false
+          stockStatus: data.stockStatus,
           sellFrom: data.sellFrom,
           shippingOrigin: data.shipOrigin
         });
@@ -65,24 +65,26 @@ class ProductHeaderInformation extends React.Component {
             <h1>{this.state.name}</h1>
           </Col>
         </Row>
-        <Row className="productSubTitle">
-          <Col>Rating: {this.state.starRatings} ({this.state.reviewsQuantity})</Col>
-          <Col>Write a Review</Col>
+        {/* formatting issue, text needs to be smaller */}
+        <Row className="font-11px">
+          <Col sm={3}>Rating: {this.state.starRatings} ({this.state.reviewsQuantity})</Col>
+          <Col sm={3}>Write a Review</Col>
           <Col>See ({this.state.questionsQuantity}) Questions | ({this.state.answersQuantity}) Answers</Col>
+          {/* require share button a popover */}
         </Row>
         <Row>
-          <Col>
+          <Col className="target-spot">
             <hr/>
           </Col>
         </Row>
         <Row>
-          <Col>
+          <Col className="font-13px">
             {this.state.stockStatus === 1 ? "In Stock. " : "Out of Stock. "}
             Limit {this.state.sellLimit} per customer. ships from {this.state.sellFrom}
           </Col>
         </Row>
         <Row>
-          <Col>
+          <Col className="font-13px">
             Sold and Shipped By {this.state.shippingOrigin}
           </Col>
         </Row>

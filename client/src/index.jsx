@@ -12,7 +12,9 @@ import Col from "react-bootstrap/Col";
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+
+    };
   }
   componentDidMount() {
     // GET request for productImages, productOptions, productHeaderInformation, productFooterInformation
@@ -26,12 +28,12 @@ class App extends React.Component {
 
   render() {
     return (
-      <Container>
-        <Row>
-          <Col lg>
+      <Container className="main-container">
+        <Row xl>
+          <Col xl>
             <ProductImage />
           </Col>
-          <Col lg>
+          <Col xl>
             <ProductHeaderInformation/>
             <ProductOptions/>
             <ProductFooterInformation/>

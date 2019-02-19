@@ -4,6 +4,7 @@ import Image from "react-bootstrap/Image";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Drift from "drift-zoom";
 
 class ProductImage extends React.Component {
   constructor(props) {
@@ -16,6 +17,7 @@ class ProductImage extends React.Component {
     };
     this.getImages = this.getImages.bind(this);
     this.getLogo = this.getLogo.bind(this);
+    this.imageZoom = this.imageZoom.bind(this);
   }
 
   componentDidMount() {
@@ -41,20 +43,36 @@ class ProductImage extends React.Component {
       .catch(err => console.error(err));
   }
 
+  imageZoom(){
+    // REQUIRES TO BE TESTED, STILL IN IMPLEMENTATION PHASE
+    new Drift(document.querySelector('.onZoom'), {
+      paneContainer: document.body,
+      inlinePane: 900,
+      inlineOffsetY: -85,
+      containInline: true,
+      hoverBoundingBox: true 
+    });
+  }
+
   render() {
     return (
       <Container>
         <Row>
           <Col md="auto">
-            {/* <h1>Image Testing id:{this.state.productId}</h1> */}
             <Image
+              className="onZoom"
+              //Attempt on hover zoom effect, STILL IN IMPLEMENTATION PHASE
+              data-zoom={this.state.primaryImage.imgSrc}
+              //require ability to switch images on mouse hover
               src={this.state.primaryImage.imgSrc}
               width="470"
               height="350"
             />
           </Col>
         </Row>
-        <Row >
+        {/* test className here */}
+        <Row className="justify-content-center" >
+          {/* require css formatting to cluster tiles in center justified */}
           {this.state.images.map(image => (
             <Col md="auto">
               <Image src={image.imgSrc} thumbnail width="56" height="48"/>

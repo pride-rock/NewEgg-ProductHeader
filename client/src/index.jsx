@@ -1,10 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import productImage from "./components/productImage"
-import productHeaderInformation from "./components/productHeaderInformation"
-import productOptions from "./components/productOptions"
-import productFooterInformation from "./components/productFooterInformation"
+import ProductImage from "./components/ProductImage";
+import ProductHeaderInformation from "./components/ProductHeaderInformation";
+import ProductOptions from "./components/ProductOptions";
+import ProductFooterInformation from "./components/ProductFooterInformation";
 import axios from "axios";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 class App extends React.Component {
   constructor(props) {
@@ -13,7 +16,7 @@ class App extends React.Component {
 
     };
   }
-  componentDidMount(){
+  componentDidMount() {
     // GET request for productImages, productOptions, productHeaderInformation, productFooterInformation
     // productImages; mouseOverZoom(), image tiles w/ mouseOver()
     // productHeaderInformation; title, share button (w/ social media icons), star rating reviews, Q&A #
@@ -21,11 +24,22 @@ class App extends React.Component {
     // productFooterInformation; descriptions
   }
 
+  // After every refresh random generate a product_id # & pass state to child components
+
   render() {
     return (
-      <div>
-        <h1>Work in Progress</h1>
-      </div>
+      <Container className="main-container">
+        <Row xl>
+          <Col xl>
+            <ProductImage />
+          </Col>
+          <Col xl>
+            <ProductHeaderInformation/>
+            <ProductOptions/>
+            <ProductFooterInformation/>
+          </Col>
+        </Row>
+      </Container>
     );
   }
 }

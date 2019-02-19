@@ -29,11 +29,11 @@ class App extends React.Component {
   render() {
     return (
       <Container className="main-container">
-        <Row xl>
-          <Col xl>
-            <ProductImage />
+        <Row>
+          <Col>
+            <ProductImage/>
           </Col>
-          <Col xl>
+          <Col>
             <ProductHeaderInformation/>
             <ProductOptions/>
             <ProductFooterInformation/>

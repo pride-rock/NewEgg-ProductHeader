@@ -7,24 +7,24 @@
   </head>
   <body>
     <!-- <div id="Info"></div>
-    <div id="CountDown"></div>
-    <div id="Related"></div>
-    <div id="Reviews"></div> -->
+      <div id="Related"></div> -->
+      <div id="app"></div>
+      <!-- <div id="header"></div> -->
     <script src="/lib/react.development.js"></script>
     <script src="/lib/react-dom.development.js"></script>
-    <script src="http://localhost:3010/app.js"></script>
+    <script src="http://localhost:3010/bundle.js"></script>
     <!-- <script src="http://localhost:3002/app.js"></script>
     <script src="http://localhost:3003/app.js"></script>
     <script src="http://localhost:3004/app.js"></script> -->
     <!-- see: https://reactjs.org/docs/react-without-jsx.html -->
     <script>
       ReactDOM.render(
-        React.createElement(productHeader),
-        document.getElementById('productHeader')
+        React.createElement(productFooterInformation),
+        document.getElementById('app')
       );
       // ReactDOM.render(
-      //   React.createElement(CountDown),
-      //   document.getElementById('CountDown')
+      //   React.createElement(productHeaderInformation),
+      //   document.getElementById('header')
       // );
       // ReactDOM.render(
       //   React.createElement(Related),

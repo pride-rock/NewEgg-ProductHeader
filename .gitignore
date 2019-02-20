@@ -4,8 +4,8 @@ node_modules
 # configuration keys; API KEYS, AWS SSH KEYS
 .config.js
 
-# db files
-productHeader.db
+# db files, save db files into github
+# productHeader.db
 
 # miscellaneous
 package-lock.json

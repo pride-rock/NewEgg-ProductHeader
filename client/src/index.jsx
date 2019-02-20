@@ -28,7 +28,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <Container className="main-container">
+      <Container>
         <Row>
           <Col>
             <ProductImage/>

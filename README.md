@@ -15,3 +15,8 @@ The API contains a multitude of product information and image renderings of disp
 - Testing:
   - Jest
   - Puppeteer
+
+## AWS
+
+- forever.js
+- `forever start server/index.js` then `npm run server`

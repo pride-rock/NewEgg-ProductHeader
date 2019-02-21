@@ -13,12 +13,9 @@ app.use(express.static(path.join(__dirname, '/public')));
 
 // app.use('/:id', express.static(path.join(__dirname, './public')));
 
-app.get('/', (req,res) => {
-  console.log(res.send(req.body))
-  axios.get('localhost:3010')
-    .then(({data}) => {
-      console.log(data)
-    })
+
+app.get('*', (req,res) => {
+  res.sendFile(path.join(__dirname, '/public/index.html'))
 })
 
 app.listen(port, () => {

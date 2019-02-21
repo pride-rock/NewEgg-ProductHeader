@@ -11,7 +11,7 @@ class ProductHeaderInformation extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      productId: 47,
+      // productId: 47,
       name: "",
       starRatings: "",
       reviewsQuantity: "",
@@ -33,8 +33,9 @@ class ProductHeaderInformation extends React.Component {
   }
 
   getProductInformation() {
-    // axios.get(`api/items/${this.state.productId}`)
-    axios.get(`http://localhost:3010/api/items/${this.state.productId}`)
+    const idtag = window.location.href.split('/')[3]
+    // axios.get(`http://localhost:3010/api/items/${this.state.productId}`)
+    axios.get(`http://localhost:3010/api/items/${idtag}`)
       .then(({ data }) => {
         this.setState({
           name: data.name,

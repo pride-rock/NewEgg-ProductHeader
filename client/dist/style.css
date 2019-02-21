@@ -11,3 +11,7 @@
   font-size: 12px;
   font-weight: bold;
 }
+
+.primeImage {
+  z-index: 1;
+}

@@ -13,10 +13,14 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      // product id to pass down to child components
     };
+    this.idFetchURL = this.idFetchURL.bind(this)
   }
   componentDidMount() {
+    // request product id from URL when componentDidMount()
+    this.idFetchURL()
+
     // GET request for productImages, productOptions, productHeaderInformation, productFooterInformation
     // productImages; mouseOverZoom(), image tiles w/ mouseOver()
     // productHeaderInformation; title, share button (w/ social media icons), star rating reviews, Q&A #
@@ -24,7 +28,16 @@ class App extends React.Component {
     // productFooterInformation; descriptions
   }
 
-  // After every refresh random generate a product_id # & pass state to child components
+
+  idFetchURL(){
+    axios.get('/')
+      .then(() => {
+        // console.log(window.location.href)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+  }
 
   render() {
     return (

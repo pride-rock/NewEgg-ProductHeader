@@ -4,7 +4,7 @@ import Image from "react-bootstrap/Image";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import ReactImageMagnify from "react-image-magnify";
+import ReactImageMagnify from 'react-image-magnify';
 
 class ProductImage extends React.Component {
   constructor(props) {
@@ -26,16 +26,16 @@ class ProductImage extends React.Component {
   }
 
   getLogo() {
-    // axios.get(`api/items/${this.state.productId}`)
-    axios.get(`http://localhost:3010/api/items/${this.state.productId}`)
+    const idtag = window.location.href.split('/')[3]
+    axios.get(`http://localhost:3010/api/items/${idtag}`)
       .then(({ data }) => {
         this.setState({ logoImg: data.logoOverlay });
       })
       .catch(err => console.error(err));
   }
   getImages() {
-    axios
-      .get(`http://localhost:3010/api/images/${this.state.productId}`)
+    const idtag = window.location.href.split('/')[3]
+    axios.get(`http://localhost:3010/api/images/${idtag}`)
       .then(({ data }) => {
         this.setState({ images: data, primaryImage: data[0] }); //configure data to be specifying what in data is images data.img
       })
@@ -55,7 +55,7 @@ class ProductImage extends React.Component {
               width="470"
               height="350"
             /> */}
-            <ReactImageMagnify
+            <ReactImageMagnify className="primeImage"
               {...{
                 smallImage: {
                   alt: "Wristwatch by Ted Baker London",

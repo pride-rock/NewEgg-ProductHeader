@@ -24,8 +24,8 @@ class ProductOptions extends React.Component {
   }
 
   getCategoryNames() {
-    axios
-      .get(`http://localhost:3010/api/category/${this.state.productId}`)
+    const idtag = window.location.href.split('/')[3]
+    axios.get(`http://localhost:3010/api/category/${idtag}`)
       .then(({ data }) => {
         this.setState({
           category: data.map(name => name.categoryName),

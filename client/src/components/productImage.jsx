@@ -26,8 +26,8 @@ class ProductImage extends React.Component {
   }
 
   getLogo() {
-    axios
-      .get(`api/items/${this.state.productId}`)
+    // axios.get(`api/items/${this.state.productId}`)
+    axios.get(`http://localhost:3010/api/items/${this.state.productId}`)
       .then(({ data }) => {
         this.setState({ logoImg: data.logoOverlay });
       })
@@ -35,7 +35,7 @@ class ProductImage extends React.Component {
   }
   getImages() {
     axios
-      .get(`api/images/${this.state.productId}`)
+      .get(`http://localhost:3010/api/images/${this.state.productId}`)
       .then(({ data }) => {
         this.setState({ images: data, primaryImage: data[0] }); //configure data to be specifying what in data is images data.img
       })

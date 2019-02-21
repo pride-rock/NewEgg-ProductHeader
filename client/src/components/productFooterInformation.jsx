@@ -24,7 +24,7 @@ class ProductFooterInformation extends React.Component {
 
   getDescription() {
     axios
-      .get(`api/description/${this.state.productId}`)
+      .get(`http://localhost:3010/api/description/${this.state.productId}`)
       .then(({ data }) => {
         this.setState({ description: data });
       })
@@ -32,7 +32,7 @@ class ProductFooterInformation extends React.Component {
   }
 
   getProductInfo() {
-    axios.get(`api/items/${this.state.productId}`)
+    axios.get(`http://localhost:3010/api/items/${this.state.productId}`)
     .then(({ data }) => {
       this.setState({
         stockQuantity: data.stockAmount,

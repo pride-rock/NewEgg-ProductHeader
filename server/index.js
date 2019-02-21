@@ -2,10 +2,12 @@ const sqlite3 = require("sqlite3");
 const express = require("express");
 const axios = require("axios");
 const parser = require("body-parser");
+const cors = require("cors")
 const app = express();
 
 app.use(express.static(__dirname + "/../client/dist"));
 app.use(parser.json());
+app.use(cors())
 
 // db connect
 const db = new sqlite3.Database("./database/productHeader.db", err => {

@@ -33,7 +33,8 @@ class ProductHeaderInformation extends React.Component {
   }
 
   getProductInformation() {
-    axios.get(`api/items/${this.state.productId}`)
+    // axios.get(`api/items/${this.state.productId}`)
+    axios.get(`http://localhost:3010/api/items/${this.state.productId}`)
       .then(({ data }) => {
         this.setState({
           name: data.name,

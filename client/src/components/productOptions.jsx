@@ -25,7 +25,7 @@ class ProductOptions extends React.Component {
 
   getCategoryNames() {
     const idtag = window.location.href.split('/')[3]
-    axios.get(`http://localhost:3010/api/category/${idtag}`)
+    axios.get(`http://18.223.158.147/api/category/${idtag}`)
       .then(({ data }) => {
         this.setState({
           category: data.map(name => name.categoryName),
@@ -39,7 +39,7 @@ class ProductOptions extends React.Component {
   // implement something to prevent overwriting of the state when mapping through id's
   getOptions() {
     this.state.categoryId.map(id =>
-      axios.get(`http://localhost:3010/api/option_categories/${id}`)
+      axios.get(`http://18.223.158.147/api/option_categories/${id}`)
         .then(({ data }) => {
           this.setState({
             options: data.map(item => item.options)

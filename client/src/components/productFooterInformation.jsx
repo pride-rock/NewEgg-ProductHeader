@@ -24,7 +24,8 @@ class ProductFooterInformation extends React.Component {
 
   getDescription() {
     const idtag = window.location.href.split('/')[3]
-    axios.get(`http://localhost:3010/api/description/${idtag}`)
+    axios.get(`http://18.223.158.147/api/description/${idtag}`)
+    // axios.get(`http://localhost:3010/api/description/${idtag}`)
     // axios.get(`http://localhost:3010/api/description/${this.state.productId}`)
       .then(({ data }) => {
         this.setState({ description: data });
@@ -34,7 +35,7 @@ class ProductFooterInformation extends React.Component {
 
   getProductInfo() {
     const idtag = window.location.href.split('/')[3]
-    axios.get(`http://localhost:3010/api/items/${idtag}`)
+    axios.get(`http://18.223.158.147/api/items/${idtag}`)
     // axios.get(`http://localhost:3010/api/items/${this.state.productId}`)
     .then(({ data }) => {
       this.setState({

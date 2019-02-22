@@ -11,7 +11,7 @@ class ProductImage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      productId: 47,
+      // productId: 47,
       logoImg: "",
       images: [],
       primaryImage: ""

@@ -14,11 +14,13 @@ class App extends React.Component {
     super(props);
     this.state = {
       // product id to pass down to child components
+      productId: ""
     };
+    this.getIdByUrl = this.getIdByUrl.bind(this)
   }
   componentDidMount() {
     // request product id from URL when componentDidMount()
-
+    this.getIdByUrl();
     // GET request for productImages, productOptions, productHeaderInformation, productFooterInformation
     // productImages; mouseOverZoom(), image tiles w/ mouseOver()
     // productHeaderInformation; title, share button (w/ social media icons), star rating reviews, Q&A #
@@ -26,17 +28,24 @@ class App extends React.Component {
     // productFooterInformation; descriptions
   }
 
+  // getItemByUrl, run on componentDidMount
+  // use window.location TO product ID
+  getIdByUrl() {
+    let item = window.location.href.split("/")[3] || 1;
+    this.setState({ productId: item });
+  }
+
   render() {
     return (
       <Container>
         <Row>
           <Col>
-            <ProductImage/>
+            <ProductImage id={this.state.productId}/>
           </Col>
           <Col>
-            <ProductHeaderInformation/>
-            <ProductOptions/>
-            <ProductFooterInformation/>
+            <ProductHeaderInformation id={this.state.productId}/>
+            <ProductOptions id={this.state.productId}/>
+            <ProductFooterInformation id={this.state.productId}/>
           </Col>
         </Row>
       </Container>

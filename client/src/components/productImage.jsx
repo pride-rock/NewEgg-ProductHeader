@@ -27,7 +27,7 @@ class ProductImage extends React.Component {
   }
 
   getLogo() {
-    const idtag = window.location.href.split('/')[3]
+    const idtag = window.location.href.split('/')[3] || 1; 
     axios.get(`http://${aws}/api/items/${idtag}`)
       .then(({ data }) => {
         this.setState({ logoImg: data.logoOverlay });
@@ -35,7 +35,7 @@ class ProductImage extends React.Component {
       .catch(err => console.error(err));
   }
   getImages() {
-    const idtag = window.location.href.split('/')[3]
+    const idtag = window.location.href.split('/')[3] || 1; 
     axios.get(`http://${aws}/api/images/${idtag}`)
       .then(({ data }) => {
         this.setState({ images: data, primaryImage: data[0] }); //configure data to be specifying what in data is images data.img

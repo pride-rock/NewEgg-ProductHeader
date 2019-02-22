@@ -9,6 +9,10 @@ app.use(express.static(__dirname + "/../client/dist"));
 app.use(parser.json());
 app.use(cors())
 
+app.get('/:id', (req,res) => {
+  res.sendFile(path.join(__dirname + '/../client/dist/index.html'))
+});
+
 // db connect
 const db = new sqlite3.Database("./database/productHeader.db", err => {
   if (err) console.log(err);

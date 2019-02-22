@@ -5,9 +5,9 @@ const parser = require("body-parser");
 const cors = require("cors")
 const app = express();
 
+app.use(cors())
 app.use(express.static(__dirname + "/../client/dist"));
 app.use(parser.json());
-app.use(cors())
 
 app.get('/:id', (req,res) => {
   res.sendFile(path.join(__dirname + '/../client/dist/index.html'))

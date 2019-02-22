@@ -25,7 +25,6 @@ class ProductHeaderInformation extends React.Component {
       shippingOrigin: ""
     };
     this.getProductInformation = this.getProductInformation.bind(this);
-    // this.handleClick = this.handleClick.bind(this);
   }
 
   componentDidMount() {
@@ -53,10 +52,6 @@ class ProductHeaderInformation extends React.Component {
       })
       .catch(err => console.error(err));
   }
-
-  // handleClick(){
-
-  // }
 
 
   render() {

@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import {aws} from "../../config.js";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -24,7 +25,7 @@ class ProductFooterInformation extends React.Component {
 
   getDescription() {
     const idtag = window.location.href.split('/')[3]
-    axios.get(`http://18.223.158.147/api/description/${idtag}`)
+    axios.get(`http://${aws}/api/description/${idtag}`)
     // axios.get(`http://localhost:3010/api/description/${idtag}`)
     // axios.get(`http://localhost:3010/api/description/${this.state.productId}`)
       .then(({ data }) => {
@@ -35,7 +36,7 @@ class ProductFooterInformation extends React.Component {
 
   getProductInfo() {
     const idtag = window.location.href.split('/')[3]
-    axios.get(`http://18.223.158.147/api/items/${idtag}`)
+    axios.get(`http://${aws}/api/items/${idtag}`)
     // axios.get(`http://localhost:3010/api/items/${this.state.productId}`)
     .then(({ data }) => {
       this.setState({

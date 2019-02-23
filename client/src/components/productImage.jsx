@@ -69,14 +69,14 @@ class ProductImage extends React.Component {
             />
           </div>
         </div>
-        <Row className="imageTiles">
+        <div className="row imageTiles">
           {/* require css formatting to cluster tiles in center justified */}
           {this.state.images.map(image => (
-            <Col>
-              <Image src={image.imgSrc} thumbnail />
-            </Col>
+            <div>
+              <Image src={image.imgSrc} thumbnail height="75px" width="60px" className="imageBox"/>
+            </div>
           ))}
-        </Row>
+        </div>
       </div>
     );
   }

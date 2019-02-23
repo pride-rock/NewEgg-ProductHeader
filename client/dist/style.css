@@ -28,9 +28,6 @@
 /* justify-content: flex-start; */
 /* } */
 
-.testFill {
-  background-color: blue;
-}
 .row {
   padding-top: 20px !important;
   padding-left: 10px !important;
@@ -59,9 +56,9 @@ h1 {
   padding-left: 0px !important;
 }
 
-.imageTiles div.col {
+/* .imageTiles div.col {
   padding: 10px 25px 25px;
-}
+} */
 
 .btn {
   margin: 2px !important;
@@ -74,8 +71,31 @@ h1 {
   border-color: #fff !important;
 }
 
-.ratings {
-  width: 59px;
-  height: 13px;
-  padding: 0 10px 5px 0;
+div.col .rating {
+  /* margin-right: -31%; */
+  /* width: 5px;
+  height: 13px; */
+  /* padding: 0 10px 5px 0; */
+}
+
+.img-thumbnail {
+  padding: 0.2rem !important;
+  border-radius: 0px !important;
+  margin: 0px 3px 3px !important;
+}
+
+div.row .imageTiles {
+  padding-top: 10px !important;
+  margin: auto;
+  justify-content: center;
+}
+
+.subTitle {
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-column-gap: 0px;
+}
+
+.writeReview {
 }

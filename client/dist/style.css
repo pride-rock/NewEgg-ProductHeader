@@ -71,8 +71,9 @@ h1 {
   border-color: #fff !important;
 }
 
+/* eggs */
 div.col .rating {
-  padding: 0px 25% !important;
+  padding: 5px 25% !important;
 }
 
 .col .writeReview {

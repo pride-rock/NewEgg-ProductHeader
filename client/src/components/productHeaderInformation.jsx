@@ -31,7 +31,6 @@ class ProductHeaderInformation extends React.Component {
 
   componentDidMount() {
     this.getProductInformation();
-    setTimeout(() => this.getProductInformation(), 0);
   }
 
   // pass states, product id into here soon to be `http://${aws}/api/items/${this.props.productID}`

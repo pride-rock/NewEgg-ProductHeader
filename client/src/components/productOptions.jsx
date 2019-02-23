@@ -21,6 +21,7 @@ class ProductOptions extends React.Component {
   }
   componentDidMount() {
     this.getCategoryNames();
+    setTimeout(() => this.getOptions(), 0);
   }
 
   getCategoryNames() {

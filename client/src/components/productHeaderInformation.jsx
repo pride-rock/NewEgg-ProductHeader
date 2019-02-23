@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import {aws} from "../../config.js";
+// import {rateImg} from "../../assets"
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -68,7 +69,8 @@ class ProductHeaderInformation extends React.Component {
         </Row>
         {/* formatting issue, text needs to be smaller */}
         <Row className="font-11px">
-          <Col sm={3}>Rating: {this.state.starRatings} ({this.state.reviewsQuantity})</Col>
+          {/* <Col sm={3}>Rating: {this.state.starRatings} ({this.state.reviewsQuantity})</Col> */}
+          <Col sm={3} className="rating" style={{background: `url(//${aws}/assets/spr_${this.state.starRatings}) no-repeat`}}> ({this.state.reviewsQuantity})</Col>
           <Col sm={3}>Write a Review</Col>
           <Col>See ({this.state.questionsQuantity}) Questions | ({this.state.answersQuantity}) Answers</Col>
           {/* require share button a popover */}

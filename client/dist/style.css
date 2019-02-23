@@ -74,6 +74,7 @@ h1 {
 /* eggs */
 div.col .rating {
   padding: 5px 25% !important;
+
 }
 
 .col .writeReview {
@@ -93,10 +94,10 @@ div.row .imageTiles {
 }
 
 .subTitle {
-  margin: auto;
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  grid-column-gap: 0px;
+  margin: auto !important;
+  display: grid !important;
+  grid-template-columns: auto auto auto auto !important;
+  grid-column-gap: 0px !important;
 }
 
 .writeReview {

@@ -77,19 +77,13 @@ class ProductHeaderInformation extends React.Component {
               }.png) no-repeat`
             }}
           />
-          <div>
-            <div className="col">({this.state.reviewsQuantity})</div>
+          <div className="col">({this.state.reviewsQuantity})</div>
+          <div className="col writeReview">Write a Review</div>
+          <div className="col">
+            See ({this.state.questionsQuantity}) Questions | (
+            {this.state.answersQuantity}) Answers
           </div>
-          <div>
-            <div className="col writeReview">Write a Review</div>
-          </div>
-          <div>
-            <div className="col">
-              See ({this.state.questionsQuantity}) Questions | (
-              {this.state.answersQuantity}) Answers
-            </div>
-            {/* require share button a popover */}
-          </div>
+          {/* require share button a popover */}
         </div>
         <Row>
           <Col className="target-spot">

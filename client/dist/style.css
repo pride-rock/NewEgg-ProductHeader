@@ -72,9 +72,11 @@ h1 {
 }
 
 div.col .rating {
-  /* width: 5px;
-  height: 13px; */
-  /* padding: 0 10px 5px 0; */
+  padding: 0px 25% !important;
+}
+
+.col .writeReview {
+  padding: 0px !important;
 }
 
 .img-thumbnail {

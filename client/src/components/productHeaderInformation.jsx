@@ -77,7 +77,7 @@ class ProductHeaderInformation extends React.Component {
               }.png) no-repeat`
             }}
           />
-          <div className="col">({this.state.reviewsQuantity})</div>
+          <div className="col reviewQty">({this.state.reviewsQuantity})</div>
           <div className="col writeReview">Write a Review</div>
           <div className="col">
             See ({this.state.questionsQuantity}) Questions | (

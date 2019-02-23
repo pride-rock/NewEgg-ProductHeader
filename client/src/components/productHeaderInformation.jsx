@@ -31,6 +31,7 @@ class ProductHeaderInformation extends React.Component {
 
   componentDidMount() {
     this.getProductInformation();
+    setTimeout(() => this.getProductInformation(), 0);
   }
 
   // pass states, product id into here soon to be `http://${aws}/api/items/${this.props.productID}`
@@ -67,7 +68,6 @@ class ProductHeaderInformation extends React.Component {
             <h1>{this.state.name}</h1>
           </Col>
         </Row>
-        {/* formatting issue, text needs to be smaller */}
         <div className="row font-11px subTitle">
           <div
             className="col rating"

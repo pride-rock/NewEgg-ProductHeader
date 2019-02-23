@@ -16,7 +16,7 @@ class App extends React.Component {
       // product id to pass down to child components
       productId: ""
     };
-    this.getIdByUrl = this.getIdByUrl.bind(this)
+    this.getIdByUrl = this.getIdByUrl.bind(this);
   }
   componentDidMount() {
     // request product id from URL when componentDidMount()
@@ -37,18 +37,16 @@ class App extends React.Component {
 
   render() {
     return (
-      <Container>
-        <Row>
-          <Col>
-            <ProductImage id={this.state.productId}/>
-          </Col>
-          <Col>
-            <ProductHeaderInformation id={this.state.productId}/>
-            <ProductOptions id={this.state.productId}/>
-            <ProductFooterInformation id={this.state.productId}/>
-          </Col>
-        </Row>
-      </Container>
+      <div className="row">
+        <Col className="col-4">
+          <ProductImage id={this.state.productId} />
+        </Col>
+        <Col className="col-5">
+          <ProductHeaderInformation id={this.state.productId} />
+          <ProductOptions id={this.state.productId} />
+          <ProductFooterInformation id={this.state.productId} />
+        </Col>
+      </div>
     );
   }
 }

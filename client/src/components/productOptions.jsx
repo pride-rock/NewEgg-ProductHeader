@@ -54,7 +54,7 @@ class ProductOptions extends React.Component {
     return (
       <Container>
         {this.state.category.map(name => (
-          <Row className="font-12px-bold">
+          <Row className="font-12px-bold" key={name}>
             <Col>{`${name}: `}</Col>
           </Row>
         ))}
@@ -62,7 +62,7 @@ class ProductOptions extends React.Component {
           <Col>
             <ButtonToolbar>
               {this.state.options.map(item => (
-                <Button variant="secondary">{item}</Button>
+                <Button key={item} variant="secondary">{item}</Button>
               ))}
             </ButtonToolbar>
           </Col>

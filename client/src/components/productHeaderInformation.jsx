@@ -61,7 +61,7 @@ class ProductHeaderInformation extends React.Component {
   render() {
     return (
       <Container>
-        <Row>
+        <Row className="col-productName">
           <Col>
             <h1>{this.state.name}</h1>
           </Col>

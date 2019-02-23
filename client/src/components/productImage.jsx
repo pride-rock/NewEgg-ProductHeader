@@ -48,14 +48,6 @@ class ProductImage extends React.Component {
       <Container>
         <Row>
           <Col md="auto">
-            {/* <Image
-              //Attempt on hover zoom effect, STILL IN IMPLEMENTATION PHASE
-
-              //require ability to switch images on mouse hover
-              src={this.state.primaryImage.imgSrc}
-              width="470"
-              height="350"
-            /> */}
             <ReactImageMagnify className="primeImage"
               {...{
                 smallImage: {

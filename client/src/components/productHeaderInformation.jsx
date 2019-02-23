@@ -72,7 +72,7 @@ class ProductHeaderInformation extends React.Component {
             className="col rating"
             style={{
               background: `url(//${aws}/assets/spr_${
-                this.state.starRatings
+                this.state.starRatings || 1
               }.png) no-repeat`
             }}
           />

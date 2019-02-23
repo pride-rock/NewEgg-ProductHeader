@@ -25,7 +25,7 @@ class ProductOptions extends React.Component {
   }
 
   getCategoryNames() {
-    const idtag = window.location.href.split('/')[3] || 1; 
+    const idtag = window.location.href.split('/')[3] || 65; 
     axios.get(`http://${aws}/api/category/${idtag}`)
       .then(({ data }) => {
         this.setState({
@@ -62,9 +62,11 @@ class ProductOptions extends React.Component {
           <Col>
             <ButtonToolbar>
               {this.state.options.map(item => (
-                <Button key={item} variant="secondary">{item}</Button>
+                <Button variant="secondary">{item}</Button>
               ))}
             </ButtonToolbar>
+            {/* issue here */}
+            {/* just have a <p> tag to see the items instead of button */}
           </Col>
         </Row>
         <Row>

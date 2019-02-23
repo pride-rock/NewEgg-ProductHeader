@@ -1,31 +1,32 @@
-/* review rating, Q & A */
 .font-11px {
   font-size: 11px;
+}
+.font-12px-bold {
+  font-size: 12px;
+  font-weight: bold;
 }
 
 .font-13px {
   font-size: 13px;
 }
 
-.font-12px-bold {
-  font-size: 12px;
-  font-weight: bold;
+.font-14px {
+  font-size: 14px;
 }
 
 .primeImage {
   z-index: 1;
 }
 
-.col-image {
-  /* height: 200px; */
+/* .col-image {
   display: flex;
   justify-content: flex-start;
-}
+} */
 
-.col-product {
+/* .col-product { */
   /* display: flex; */
   /* justify-content: flex-start; */
-}
+/* } */
 
 .testFill {
   background-color: blue;
@@ -37,8 +38,7 @@
 
 .row div.row {
   padding-top: 0px !important;
-
-} 
+}
 
 /* .col-productName {
   height: 50px !important;
@@ -50,6 +50,26 @@ h1 {
   margin-bottom: 5px;
 }
 
+.col-4 {
+  max-width: 100% !important;
+}
+
 .col-5 {
-  padding-left: 40px !important;
+  padding-right: 60px !important;
+  padding-left: 0px !important;
+}
+
+.imageTiles div.col {
+  padding: 10px 25px 25px;
+}
+
+.btn {
+  margin: 2px !important;
+  border-radius: 0 !important;
+}
+
+.btn-secondary {
+  color: black !important;
+  background-color: #eee !important;
+  border-color: #FFF !important;
 }

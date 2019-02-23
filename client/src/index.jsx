@@ -31,16 +31,17 @@ class App extends React.Component {
   // getItemByUrl, run on componentDidMount
   // use window.location TO product ID
   getIdByUrl() {
-    let item = window.location.href.split("/")[3] || 1;
+    let item = window.location.href.split("/")[3] || 60;
     this.setState({ productId: item });
   }
 
   render() {
     return (
       <div className="row">
-        <Col className="col-4">
+        <div className="col-4">
           <ProductImage id={this.state.productId} />
-        </Col>
+        </div>
+
         <Col className="col-5">
           <ProductHeaderInformation id={this.state.productId} />
           <ProductOptions id={this.state.productId} />

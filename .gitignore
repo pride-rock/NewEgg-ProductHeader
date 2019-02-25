@@ -2,12 +2,13 @@
 node_modules
 
 # configuration keys; API KEYS, AWS SSH KEYS
-.config.js
+config.js
 
 # db files, save db files into github
 # productHeader.db
 
 # miscellaneous
+aws-s3
 package-lock.json
 example
 

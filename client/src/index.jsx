@@ -42,11 +42,11 @@ class App extends React.Component {
           <ProductImage id={this.state.productId} />
         </div>
 
-        <Col className="col-5">
-          <ProductHeaderInformation id={this.state.productId} />
-          <ProductOptions id={this.state.productId} />
-          <ProductFooterInformation id={this.state.productId} />
-        </Col>
+        <div className="col-5">
+          <ProductHeaderInformation/>
+          <ProductOptions/>
+          <ProductFooterInformation/>
+        </div>
       </div>
     );
   }

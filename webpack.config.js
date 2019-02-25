@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
+const CompressionPlugin = require('compression-webpack-plugin');
 
 const SRC_DIR = path.join(__dirname, 'client/src');
 const DIST_DIR = path.join(__dirname, 'client/dist');
@@ -24,6 +25,9 @@ const config = {
       }
     ]
   },
+  plugins: [
+    new CompressionPlugin()
+  ],
   resolve: {
     extensions: [
       '.js',

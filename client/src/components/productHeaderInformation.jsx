@@ -62,11 +62,11 @@ class ProductHeaderInformation extends React.Component {
   render() {
     return (
       <Container>
-        <Row className="col-productName">
-          <Col>
+        <div className="row">
+          <div className="col">
             <h1>{this.state.name}</h1>
-          </Col>
-        </Row>
+          </div>
+        </div>
         <div className="row font-11px subTitle">
           <div
             className="col rating"

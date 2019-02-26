@@ -7,7 +7,8 @@ The API contains a multitude of product information and image renderings of disp
 ## Dependencies
 - [Node.js](https://nodejs.org/en/) w/ [Express.js](https://www.npmjs.com/package/express) & [Axios](https://www.npmjs.com/package/axios)
 - [sqlite3](https://www.npmjs.com/package/sqlite3)
-- React
+- [React](https://reactjs.org/)
+- [forever.js](https://github.com/foreverjs/forever)
 - Testing:
   - Jest
   - Puppeteer
@@ -18,7 +19,9 @@ The API contains a multitude of product information and image renderings of disp
 - run `sqlite3 (DBFILE NAME) < (SQL FILENAME)` to create empty db file
 - execute `databaseInsertion.js` to generate sampleData & seed db file
 
-- [forever.js](https://github.com/foreverjs/forever)
+- server
 - `forever start server/index.js` then `npm run server`
+- `npm run server-dev`
 
-
+- webpack
+- `npm run react-dev`

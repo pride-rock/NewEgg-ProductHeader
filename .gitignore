@@ -7,6 +7,9 @@ config.js
 # db files, save db files into github
 # productHeader.db
 
+bundle.js
+bundle.js.gz
+
 # miscellaneous
 aws-s3
 package-lock.json

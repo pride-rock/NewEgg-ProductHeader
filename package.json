@@ -31,7 +31,7 @@
     "react-bootstrap": "^1.0.0-beta.5",
     "react-dom": "^16.8.1",
     "react-image-magnify": "^2.7.4",
-    "sqlite3": "^4.0.6"
+    "sqlite3": "https://github.com/mapbox/node-sqlite3/tarball/master"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",

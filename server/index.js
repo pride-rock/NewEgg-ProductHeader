@@ -4,6 +4,7 @@ const axios = require("axios");
 const parser = require("body-parser");
 const cors = require("cors")
 const app = express();
+// install path
 
 app.use(cors())
 app.use(express.static(__dirname + "/../client/dist"));

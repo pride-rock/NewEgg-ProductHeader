@@ -2,10 +2,6 @@ var sampleData = require("./generator");
 var sqlite3 = require("sqlite3").verbose();
 var db = new sqlite3.Database("productHeader.db");
 
-// COMMAND sql insertion
-// sqlite3 (DBFILE NAME) < (SQL FILENAME)
-// if dropping database/tables, re-run command
-
 db.serialize(function() {
   sampleData.forEach(data => {
     //PRODUCT TABLE
@@ -33,8 +29,7 @@ db.serialize(function() {
     );
 
     // IMAGES TABLE, CAROSEL
-    data.images.forEach(eachImg =>
-      // console.log(eachImg.image)
+    data.images.forEach(eachImg => 
       db.run("INSERT INTO img \
     (imgSrc, id_product) VALUES (?,?)", [
         eachImg.image,
